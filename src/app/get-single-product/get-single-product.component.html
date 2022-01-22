@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row" style="margin-top: 50px">
+    <div class="col-md-6">
+      <div class="row">
+        <h3>Get Product Details By Product Id</h3>
+        <label class="form-label" style="font-family: Poppins;font-weight: 600; font-size: 1.2rem;color: #E93B81">Enter
+          Product Id</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="number" class="form-control" [(ngModel)]="productId" style="width:50%">
+          </div>
+            <button type="button" class="btn btn-primary" (click)="getProductById()">Search Product</button>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px;">
+        <h3>Want All Products?</h3>
+        <button class="btn btn-success" routerLink="/get-all-products" routerLinkActive="active">Click Here</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h3>Product Details</h3>
+      <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item"><span class="product-label">Product Id:</span> {{product.productId}}</li>
+          <li class="list-group-item"><span class="product-label">Product Name:</span> {{product.productName}}</li>
+          <li class="list-group-item"><span class="product-label">Principal Amount:</span> {{product.principalAmount}}
+          </li>
+          <li class="list-group-item"><span class="product-label">Rate of interest:</span>{{product.rateOfInterest}}</li>
+          <li class="list-group-item"><span class="product-label">Created By:</span> {{product.createdBy}}</li>
+          <li class="list-group-item"><span class="product-label">Created On:</span> {{product.createdOn}}</li>
+          <li class="list-group-item"><span class="product-label">Tenure:</span> {{product.tenure}}</li>
+          <li class="list-group-item"><span class="product-label">Updated By:</span> {{product.updatedBy}}</li>
+          <li class="list-group-item"><span class="product-label">Updated On:</span> {{product.updatedOn}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

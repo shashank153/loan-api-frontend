@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <h1>
+      Enter Details For New Product
+    </h1>
+  </div>
+  <div class="row">
+    <form [formGroup]="postProduct" (ngSubmit)="submitProductData()" class="row g-3 needs-validation" novalidate>
+      <div class="row">
+        <div class="form-group mb-3">
+          <label for="product-name" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="product-name" formControlName="productName"
+                 placeholder="Enter product name">
+        </div>
+        <div class="form-group mb-3">
+          <label for="created-by" class="form-label">Created By</label>
+          <input type="text" class="form-control" id="created-by" formControlName="createdBy" placeholder="Created by">
+        </div>
+        <div class="col-md-4">
+          <div class="form-group mb-3">
+            <label for="principal-amount" class="form-label">Principal Amount</label>
+            <input type="text" class="form-control" id="principal-amount" formControlName="principalAmount"
+                   placeholder="Enter principal amount">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group mb-3">
+            <label for="tenure" class="form-label">Tenure</label>
+            <input type="text" class="form-control" id="tenure" formControlName="tenure" placeholder="Enter tenure">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group mb-3">
+            <label for="rate-of-interest" class="form-label">Rate Of Interest</label>
+            <input type="text" class="form-control" id="rate-of-interest" formControlName="rateOfInterest" placeholder="Enter rate of interest">
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="updated-by" class="form-label">Updated By</label>
+          <input type="text" class="form-control" id="updated-by" formControlName="updatedBy" placeholder="Updated by">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Reset</button>
+        <button type="submit" class="btn btn-success">Save</button>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="alert alert-success" role="alert" *ngIf="alert">
+      Success!! product added successfully.
+    </div>
+  </div>
+</div>

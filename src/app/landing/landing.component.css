@@ -1,0 +1,43 @@
+h1{
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 6rem;
+  color: purple;
+}
+.btn{
+  margin-top: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  width: 20%;
+  font-family: Poppins;
+}
+/*.btn.btn-primary{*/
+/*  background-color: purple;*/
+/*  border-color: purple;*/
+/*}*/
+/*.btn.btn-primary:hover{*/
+/*  background-color: #8236CB;*/
+/*  border-color: #8236CB;*/
+/*}*/
+
+img{
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  margin-left: 40px;
+}
+.row h3{
+  margin-top: 20px;
+  font-family: Poppins;
+}
+.row a{
+  margin-left: 10px;
+}
+a.btn.btn-success{
+  background-color: purple;
+  border-color: purple;
+}
+a.btn.btn-success:hover{
+  background-color: #C32BAD;
+  border-color: #C32BAD;
+}

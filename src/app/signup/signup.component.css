@@ -1,0 +1,48 @@
+form{
+  margin-left: 50px;
+  width:80%;
+  height: 100%;
+  padding: 20px;
+  font-family: Poppins;
+}
+img{
+  /*padding: 30px;*/
+  width: 100%;
+  height: 100%;
+}
+button.btn.btn-primary{
+  width:100%;
+  background-color: purple;
+  border-color: purple;
+}
+button.btn.btn-primary:hover{
+  width:100%;
+  background-color: #C32BAD;
+  border-color: #C32BAD;
+}
+h1{
+  /*font-family: Montserrat;*/
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  color: purple;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.row a{
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+  color: #E93B81;
+}
+.row p{
+  margin:0;
+  text-align: center;
+}
+.logo-icon{
+  margin:30px 20px 10px;
+  color: purple;
+}
+.logo-icon:hover{
+  color: #E93B81;
+}

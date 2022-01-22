@@ -1,0 +1,42 @@
+img{
+  margin-top: 50px;
+  width: 110%;
+  height: 100%;
+}
+
+#heading{
+  margin-top: 50px;
+  font-family: Montserrat , sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  color: purple;
+}
+#lower-heading{
+  font-family: Montserrat , sans-serif;
+  font-weight: 300;
+  font-size: 4.2rem;
+  color: #E93B81;
+}
+p{
+  font-family: 'Poppins', 'sans-serif';
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.btn{
+  margin: 0 10px;
+  padding: 10px;
+}
+.btn.btn-success{
+  background-color: purple;
+  border: purple;
+}
+.btn.btn-success:hover{
+  background-color: #8236CB;
+}
+.btn.btn-outline-danger{
+  border-color: #E93B81;
+}
+.btn.btn-outline-danger:hover{
+  background-color: #E93B81;
+}

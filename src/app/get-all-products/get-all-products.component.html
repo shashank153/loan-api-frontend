@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row" style="margin-top: 30px;">
+    <h3>Product Details</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Created By</th>
+          <th scope="col">Created On</th>
+          <th scope="col">Principal Amount</th>
+          <th scope="col">Rate of interest</th>
+          <th scope="col">Tenure</th>
+          <th scope="col">Updated By</th>
+          <th scope="col">Updated On</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let product of products">
+        <tr>
+          <th scope="row">{{product.productId}}</th>
+          <td>{{product.productName}}</td>
+          <td>{{product.createdBy}}</td>
+          <td>{{product.createdOn}}</td>
+          <td>{{product.principalAmount}}</td>
+          <td>{{product.rateOfInterest}}</td>
+          <td>{{product.tenure}}</td>
+          <td>{{product.updatedBy}}</td>
+          <td>{{product.updatedOn}}</td>
+          <td>
+            <span>
+              <a id="logo-icon-edit" data-bs-toggle="modal" data-bs-target="#product-model"
+                (click)="editProductData(product.productId)"><i class="fas fa-edit"></i></a>
+            </span>
+          </td>
+          <td>
+            <span>
+              <a id="logo-icon-delete" (click)="delete(product.productId)"><i class="fas fa-trash"></i></a>
+            </span>
+          </td>
+          <td>
+            <span>
+              <a id="logo-icon-calculate" (click)="calculateEmi(product.productId)"><i
+                  class="fas fa-calculator"></i></a>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--Model for update-->
+<div class="modal fade" id="product-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update details of product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editProduct" (ngSubmit)="updateProduct(product.productId)">
+            <div class="row">
+            <div class="form-group mb-3 col-md-4">
+              <label for="product-id" class="form-label">Product Id</label>
+              <input type="text" class="form-control" id="product-id" formControlName="productId" [attr.disabled]="true">
+            </div>
+            <div class="form-group mb-3 col-md-8">
+              <label for="product-name" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="product-name" formControlName="productName">
+            </div>            
+            <div class="form-group mb-3">
+              <label for="created-by" class="form-label">Created By</label>
+              <input type="text" class="form-control" id="created-by" formControlName="createdBy">
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="created-on" class="form-label">Created On</label>
+                <input type="text" class="form-control" id="created-on" formControlName="createdOn">
+              </div>
+              <div class="form-group mb-3">
+                <label for="updated-on" class="form-label">Updated On</label>
+                <input type="text" class="form-control" id="updated-on" formControlName="updatedOn">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3">
+                <label for="principal-amount" class="form-label">Principal Amount</label>
+                <input type="text" class="form-control" id="principal-amount" formControlName="principalAmount">
+              </div>
+              <div class="row">
+                <div class="form-group mb-3 col-md-6">
+                  <label for="tenure" class="form-label">Tenure</label>
+                  <input type="text" class="form-control" id="tenure" formControlName="tenure">
+                </div>
+                <div class="form-group mb-3 col-md-6">
+                  <label for="tenure" class="form-label">ROI</label>
+                  <input type="text" class="form-control" id="tenure" formControlName="rateOfInterest">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="updated-by" class="form-label">Updated By</label>
+            <input type="text" class="form-control" id="updated-by" formControlName="updatedBy">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
